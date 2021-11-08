@@ -1,38 +1,126 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "vazir";
+  src: url("./Font/Vazir.woff") format("woff");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#root{
+  width: 100%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html,
+body {
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #3d51b5;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-family: "vazir";
+  direction: rtl;
 }
 
-.App-link {
-  color: #61dafb;
+.main {
+  margin: 2rem auto;
+  max-width: 50rem;
+  background-color: #fff;
+  border-radius: .5rem;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f7f7f7;
+  padding: 2rem 4rem;
+}
+
+.header h2 {
+  margin: 0;
+  color: #3f51b5;
+  user-select: none;
+}
+
+.form {
+  padding: 3rem 4rem;
+}
+
+.form button {
+  width: 100%;
+  background-color: #3d51b5;
+  color: #fff;
+  padding: .8rem 0;
+  border-radius: .4rem;
+  border: .1rem solid transparent;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: all .3s;
+  font-size: 1.8rem;
+  font-family: "vazir";
+}
+
+.form button:hover {
+  background: transparent;
+  border: .1rem solid #3f51b5;
+  color: #333;
+}
+
+.form-controls {
+  margin-bottom: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.form-controls label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #212121;
+  font-size: 1.2rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+.form-controls input {
+  width: 100%;
+  border: .2rem solid #d8d8d8;
+  border-radius: .5rem;
+  display: block;
+  font-size: 1.4rem;
+  padding: 1rem;
+  direction: ltr;
+}
+
+.form-controls input:focus {
+  outline: none;
+  border-color: #9fa8da;
+}
+
+.form-controls.success input {
+  border-color: #66bb6a;
+}
+
+.form-controls.error input {
+  border-color: #ef5350;
+}
+
+.form-controls small {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  color: #ef5350;
+}
+
+.form-controls.error small {
+  visibility: visible;
 }
